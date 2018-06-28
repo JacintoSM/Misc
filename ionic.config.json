@@ -1,0 +1,8 @@
+{
+  "name": "matrixapp",
+  "app_id": "c99301b3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

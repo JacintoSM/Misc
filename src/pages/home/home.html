@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title text-uppercase>Misc App</ion-title>
+        <ion-buttons>
+            <button ion-button
+                    icon-only
+                    (click)="showMenu()">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list-header text-center text-uppercase>
+        Developers
+    </ion-list-header>
+
+    <ion-list>
+      <button ion-item *ngFor="let developer of developerList"
+          (click)="sendDeveloperData(developer)">
+          <ion-thumbnail item-left>
+              <img [src]="developer.photo">
+          </ion-thumbnail>
+        {{ developer.name }}
+      </button>
+    </ion-list>
+
+    <ion-list-header text-center text-uppercase>
+        About Misc App
+    </ion-list-header>
+
+    <button ion-button
+            block
+            color="secondary"
+            (click)="aboutMiscApp()">
+      About
+    </button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> {{ counter }} developers </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+

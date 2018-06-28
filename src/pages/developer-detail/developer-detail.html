@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ data.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="text-center">
+    <img [src]="data.photo"/>
+    <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+            {{ data.name }}
+            </ion-card-title>
+          <p>
+            Developer Apps
+            <ion-list>
+              <button ion-item *ngFor="let app of appList"
+                      (click)="aboutMiscApp(app)">
+                 {{ app }}
+              </button>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+
+
+      <div class="text-primary">
+          I
+          <ion-icon
+              name="ionic"
+              class="fa-spin fa-2x">
+          </ion-icon>NIC
+      </div>
+
+
+</ion-content>

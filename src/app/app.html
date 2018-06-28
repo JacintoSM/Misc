@@ -1,0 +1,46 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+          <button menuClose ion-item *ngFor="let page of pages" (click)="openPage(page)">
+            {{page.title}}
+          </button>
+        </ion-list>
+
+    <!-- <ion-list>
+        <button ion-item
+          (click)="openAppsPage()">
+          <ion-avatar item-left>
+              <img src="../assets/imgs/home.png">
+          </ion-avatar>
+          Home
+        </button>
+        <button ion-item>
+          <ion-avatar item-left>
+              <img src="../assets/imgs/apps.png">
+          </ion-avatar>
+          Apps
+        </button>
+        <button ion-item>
+          <ion-avatar item-left>
+              <img src="../assets/imgs/settings.png">
+          </ion-avatar>
+          Options
+        </button>
+        <button ion-item>
+          <ion-avatar item-left>
+              <img src="../assets/imgs/close.png">
+          </ion-avatar>
+          Close
+        </button>
+    </ion-list> -->
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-nav #content [root]="rootPage"></ion-nav>
